@@ -1,15 +1,31 @@
-import React, {Component} from 'react';
+import React, { useState, useEffect } from 'react';
+import FlowerCard from './FlowerCard';
 
+const Content = () => {
+    const [state, setState] = useState('');
 
-class Content extends Component {
-    // ----- YOUR CODE HERE ------- 
-    render(){
+    useEffect(() => {
+        const url = 'https://dtcqvoap3l.execute-api.us-west-1.amazonaws.com/default/interviewTakeHomeApi'
+
+        const fetchData = async() => {
+            try {
+                const response = await fetch(url);
+                const json = await response.json();
+                console.log(json);
+            } catch(error) {
+                console.log(error);
+            }
+        }
+
+        fetchData();
+    }, []);
+
         return (
-            <div>
-                <h3>This a starting point component. You can edit it by going to /src/Content/Content.js</h3>
+            <div className="content">
+                <h1>Flowers</h1>
+                <FlowerCard />
             </div>
         )
-    }
 }
 
 export default Content;
