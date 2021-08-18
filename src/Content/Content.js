@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import FlowerCard from './FlowerCard';
 
 const Content = () => {
-    const [state, setState] = useState('');
+    const [flowers, setFlowers] = useState('');
 
     useEffect(() => {
         const url = 'https://dtcqvoap3l.execute-api.us-west-1.amazonaws.com/default/interviewTakeHomeApi'
@@ -10,8 +10,9 @@ const Content = () => {
         const fetchData = async() => {
             try {
                 const response = await fetch(url);
-                const json = await response.json();
-                console.log(json);
+                const data = await response.json();
+                console.log(data);
+                setFlowers(data);
             } catch(error) {
                 console.log(error);
             }
@@ -23,7 +24,8 @@ const Content = () => {
         return (
             <div className="content">
                 <h1>Flowers</h1>
-                <FlowerCard />
+                {flowers.map(flower =>
+                    <FlowerCard key={flower.id} flower={flower} />)}
             </div>
         )
 }

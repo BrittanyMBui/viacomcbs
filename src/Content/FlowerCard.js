@@ -1,8 +1,8 @@
 
-const FlowerCard = () => {
+const FlowerCard = ({ flower }) => {
     return (
         <div>
-            <h1>Flower Card</h1>
+            <h3>{flower.name}</h3>
         </div>
     )
 }
