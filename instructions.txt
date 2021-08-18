@@ -1,0 +1,42 @@
+Welcome and thank you for taking the time to complete our take-home challenge for our web developer position.
+
+This assignment should take you around an hour to complete, but please don't go over 2 hours. 
+
+Once you have completed your solution, please compress your app into a zip file and send it to us.
+
+Deadline: Please submit your solution by Thursday, 08/19/2021.
+
+The goal of this challenge is to build out a UI and layout found in this image: /examples/screenshot.png
+
+The UI is made up of a main header title and a list of posts. 
+
+You will need to make an API call to retrieve the posts. To get the posts, use this URL: https://dtcqvoap3l.execute-api.us-west-1.amazonaws.com/default/interviewTakeHomeApi
+
+A starting point component is created at: /src/Content/Content.js.
+
+The aspects of your code we will assess include:
+1) Correctness: does the application do what was asked? If there is anything missing, does the README explain why it is missing?
+2) Code quality: is the code simple, clean, readable, performant, and maintainable?
+
+Here are the strict rules of this challenge...you must:
+1) Follow directions found in README to get started.
+1) Use the way you see fit to make the API call.
+2) Create components as you feel is best suited for your solution.
+3) Render the image, title, and description of each post in the list.
+
+Optional: Feel free to utilize Bootstrap or any other similar framework.
+
+Bonus Challenge: Lazy load the posts to the page. Each post should only be visible once it is in the viewport. See example: /example/lazy-loading.mov
+
+The rest is up to you!
+
+The example image and video are there as a demo. You have free rein to be creative with the UI once you have an initial solution.
+
+If there are any comments or clarification that you want to add, please write it in the README
+
+
+Resources:
+1) API: https://dtcqvoap3l.execute-api.us-west-1.amazonaws.com/default/interviewTakeHomeApi
+2) React Docs: https://reactjs.org/docs/getting-started.html
+
+Good luck and if you have questions, please reach out to us.
